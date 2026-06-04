@@ -47,7 +47,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Start analysis for prefreader
-        uses: ForAllSecure/mcode-action@long-runs
+        uses: forallsecure/mcode-action@long-runs
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
           args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.PREFREADER_MAYHEMFILE }} --duration 300
